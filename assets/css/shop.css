@@ -1,0 +1,25 @@
+.image-hover {
+  position: relative;
+  width: 500px;   /* ajuste do tamanho */
+}
+
+.image-hover img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.image-hover .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.image-hover:hover .hover-img {
+  opacity: 1;
+}
+
+.image-hover:hover img:first-child {
+  opacity: 0;
+}
