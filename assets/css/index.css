@@ -1,0 +1,16 @@
+/* 🔹 Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background: url('/assets/img/wallpaper.jpg') no-repeat center top;
+  background-size: cover;         /* cobre toda a tela, sem distorcer */
+  background-attachment: fixed;   /* mantém fixo enquanto rola */
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier Prime", monospace;
+}
+
+

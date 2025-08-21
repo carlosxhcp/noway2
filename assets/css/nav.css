@@ -1,0 +1,54 @@
+/* Navbar */
+.navbar {
+  background: transparent !important;
+}
+
+.menu-link {
+  color: white !important;
+  font-size: 28px;
+  font-weight: 800;
+  transition: color 0.3s;
+}
+
+.menu-link:hover {
+  color: #b0b0b0 !important;
+}
+
+/* Espaçamento do menu desktop */
+.menu-spacing .nav-item {
+  margin: 0 50px;
+}
+
+/* Offcanvas (mobile) */
+.offcanvas-custom {
+  width: 70vw;
+  background-color: #000;
+  color: white;
+}
+
+.offcanvas-custom .nav-link {
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px 0;
+}
+
+.offcanvas-custom .nav-link:hover {
+  color: #ccc;
+}
+
+.offcanvas-header .logo-img {
+  max-height: 50px;
+}
+
+/* Responsividade */
+@media (min-width: 992px) {
+  .mobile-menu-toggle {
+    display: none !important; /* Esconde botão mobile no PC */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .desktop-menu {
+    display: none !important; /* Esconde menu desktop no celular */
+  }
+}

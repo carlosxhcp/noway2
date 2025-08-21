@@ -1,0 +1,28 @@
+.footer-simple {
+    margin-top: 50%;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-simple .footer-logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+.footer-simple p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 991.98px) {
+.footer-simple {
+    margin-top: 200%;
+
+}
+
+
+
+}
