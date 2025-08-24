@@ -71,31 +71,31 @@
 <br><br>
 
 
-  <div class="container d-flex flex-column flex-md-row justify-content-center gap-5 mt-5">
-  <!-- Camiseta 1 -->
-  <a href="/produto1" class="text-decoration-none">
-    <div class="image-hover">
-      <img src="/assets/img/shop/p1/mock.png" class="img-fluid" alt="Camisa 1">
-      <img src="/assets/img/shop/p2/mock.png" class="img-fluid hover-img" alt="Camisa 1 Hover">
+  <div class="container mt-5">
+  <div class="row justify-content-center g-5">
+    <!-- Camiseta 1 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <a href="/produto1" class="text-decoration-none">
+        <img src="/assets/img/shop/p1/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p2/mock.png" alt="Camisa 1">
+      </a>
     </div>
-  </a>
 
-  <!-- Camiseta 2 -->
-  <a href="/produto2" class="text-decoration-none">
-    <div class="image-hover">
-      <img src="/assets/img/shop/p2/mock.png" class="img-fluid" alt="Camisa 2">
-      <img src="/assets/img/shop/p3/mock.png" class="img-fluid hover-img" alt="Camisa 2 Hover">
+    <!-- Camiseta 2 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <a href="/produto2" class="text-decoration-none">
+        <img src="/assets/img/shop/p2/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p3/mock.png" alt="Camisa 2">
+      </a>
     </div>
-  </a>
 
-  <!-- Camiseta 3 -->
-  <a href="/produto3" class="text-decoration-none">
-    <div class="image-hover">
-      <img src="/assets/img/shop/p3/mock.png" class="img-fluid" alt="Camisa 3">
-      <img src="/assets/img/shop/p1/mock.png" class="img-fluid hover-img" alt="Camisa 3 Hover">
+    <!-- Camiseta 3 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <a href="/produto3" class="text-decoration-none">
+        <img src="/assets/img/shop/p3/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p1/mock.png" alt="Camisa 3">
+      </a>
     </div>
-  </a>
+  </div>
 </div>
+
 
   
 <br><br>
@@ -110,6 +110,28 @@
   <!-- Copyright -->
   <p class="mb-1 small">© NOWAY™ 2025 – Todos os direitos reservados.</p>
 </footer>
+<script>
+document.querySelectorAll('.swap-image').forEach(img => {
+  const original = img.src;
+  const hoverSrc = img.dataset.hover;
+
+  // Desktop (hover)
+  img.addEventListener('mouseenter', () => {
+    img.src = hoverSrc;
+  });
+  img.addEventListener('mouseleave', () => {
+    img.src = original;
+  });
+
+  // Mobile (touch)
+  img.addEventListener('touchstart', () => {
+    img.src = hoverSrc;
+  });
+  img.addEventListener('touchend', () => {
+    img.src = original;
+  });
+});
+</script>
 
 
 </body>
