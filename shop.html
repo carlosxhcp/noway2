@@ -105,30 +105,29 @@
   <!-- Copyright -->
   <p class="mb-1 small">© NOWAY™ 2025 – Todos os direitos reservados.</p>
 </footer>
+
+
 <script>
 document.querySelectorAll('.swap-image').forEach(img => {
   const original = img.src;
   const hoverSrc = img.dataset.hover;
-  let mobileToggled = false;
 
   // Desktop hover
   img.addEventListener('mouseenter', () => {
-    if (!mobileToggled) img.src = hoverSrc;
+    img.src = hoverSrc;
   });
   img.addEventListener('mouseleave', () => {
-    if (!mobileToggled) img.src = original;
+    img.src = original;
   });
 
-  // Mobile touch
+  // Mobile touch com delay
   img.addEventListener('touchstart', e => {
     e.preventDefault(); // evita clique duplo do navegador
-    if (!mobileToggled) {
-      img.src = hoverSrc;
-      mobileToggled = true;
-    } else {
+    img.src = hoverSrc;
+
+    setTimeout(() => {
       img.src = original;
-      mobileToggled = false;
-    }
+    }, 1000); // 1000ms = 1s
   });
 });
 </script>
