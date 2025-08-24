@@ -1,0 +1,77 @@
+.product-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 16px;
+    }
+
+    .out-of-stock {
+      background-color: #e0e0e0;
+      color: #666;
+      cursor: not-allowed;
+    }
+
+    .color-box {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    .color-box.selected {
+      border: 2px solid #000;
+    }
+
+    .size-btn {
+      margin: 5px;
+    }
+
+    .tabela-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .tabela-container.active {
+      max-height: 1000px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: none;
+      background-color: transparent;
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid #000;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .carousel-control-prev-icon::after,
+    .carousel-control-next-icon::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .carousel-control-next-icon::after {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }

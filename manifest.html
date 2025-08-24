@@ -13,7 +13,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/rodape.css">
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/shop.css">
+  <link rel="stylesheet" href="assets/css/lookbook.css">
+  <link rel="stylesheet" href="assets/css/manifest.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -68,25 +69,13 @@
 
   <!-- 🔹 CONTEÚDO -->
 
-<div class="container mt-5">
-  <div class="row justify-content-center g-5">
-    <div class="col-12 col-sm-6 col-md-4">
-      <a href="produtos/1.html" class="text-decoration-none">
-        <img src="/assets/img/shop/p1/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p2/mock.png" alt="Camisa 1">
-      </a>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <a href="produtos/2.html" class="text-decoration-none">
-        <img src="/assets/img/shop/p2/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p3/mock.png" alt="Camisa 2">
-      </a>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <a href="produtos/3.html" class="text-decoration-none">
-        <img src="/assets/img/shop/p3/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p1/mock.png" alt="Camisa 3">
-      </a>
-    </div>
-  </div>
+   <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <picture>
+    <source srcset="assets/img/manifest/manifest_mobile.png" media="(max-width: 992px)">
+    <img src="assets/img/manifest/manifest_pc.png" width="700" class="img-fluid" alt="Texto Manifesto">
+  </picture>
 </div>
+
 
 
 
@@ -99,31 +88,6 @@
   <!-- Copyright -->
   <p class="mb-1 small">© NOWAY™ 2025 – Todos os direitos reservados.</p>
 </footer>
-
-<script>
-document.querySelectorAll('.swap-image').forEach(img => {
-  const original = img.src;
-  const hoverSrc = img.dataset.hover;
-
-  // Desktop hover
-  img.addEventListener('mouseenter', () => {
-    img.src = hoverSrc;
-  });
-  img.addEventListener('mouseleave', () => {
-    img.src = original;
-  });
-
-  // Mobile touch com delay sem travar scroll
-  img.addEventListener('touchstart', () => {
-    img.src = hoverSrc;
-
-    setTimeout(() => {
-      img.src = original;
-    }, 1000); // 1 segundo
-  }, { passive: true }); // permite scroll normalmente
-});
-</script>
-
 
 
 </body>

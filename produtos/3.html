@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Produto</title>
+
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/rodape.css">
+        <link rel="stylesheet" href="/assets/css/nav.css">
+        <link rel="stylesheet" href="/assets/css/produtos.css">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+
+  <!-- 🔹 NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Botão mobile -->
+      <button class="btn p-0 border-0 bg-transparent mobile-menu-toggle"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu"
+              aria-controls="offcanvasMenu">
+        <i class="bi bi-list" style="font-size: 2rem; color: rgb(0, 0, 0);"></i>
+      </button>
+
+      <!-- Menu Desktop -->
+      <div class="collapse navbar-collapse desktop-menu" id="navbarNav">
+        <ul class="navbar-nav mx-auto menu-spacing align-items-center">
+          <li class="nav-item"><a class="nav-link menu-link" href="/lookbook.html">LOOKBOOK</a></li>
+          <li class="nav-item"><a class="nav-link menu-link" href="/shop.html">SHOP</a></li>
+          <li class="nav-item">
+            
+            <a class="nav-link logo-link" href="index.html">
+              <img src="/assets/img/logo.png" width="100px" alt="Logo">
+            </a> 
+
+          </li>
+          <li class="nav-item"><a class="nav-link menu-link" href="/manifest.html">MANIFEST</a></li>
+          <li class="nav-item"><a class="nav-link menu-link" href="/perfil.html">ACCOUNT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 MENU MOBILE (OFFCANVAS) -->
+  <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header justify-content-between align-items-center">
+      <img src="/assets/img/logo_branco.png" alt="Logo" class="logo-img">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body text-center">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="/index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="/lookbook.html">LOOKBOOK</a></li>
+        <li class="nav-item"><a class="nav-link" href="/shop.html">SHOP</a></li>
+        <li class="nav-item"><a class="nav-link" href="/manifest.html">MANIFEST</a></li>
+        <li class="nav-item"><a class="nav-link" href="/perfil.html">ACCOUNT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 🔹 CONTEÚDO -->
+
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Carrossel de Imagens do Produto -->
+                <div class="col-md-6 text-center">
+                    <div id="carouselProduto" class="carousel slide"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/assets/img/shop/p1/mock.png"
+                                    class="d-block w-100 product-image"
+                                    alt="Imagem 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/assets/img/shop/p2/mock.png"
+                                    class="d-block w-100 product-image"
+                                    alt="Imagem 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/assets/img/shop/p3/mock.png"
+                                    class="d-block w-100 product-image"
+                                    alt="Imagem 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carouselProduto"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"
+                                aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselProduto"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"
+                                aria-hidden="true"></span>
+                            <span class="visually-hidden">Próxima</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Detalhes do Produto -->
+                <div class="col-md-6">
+                    <h5 class="text-muted">NOWAY</h5>
+                    <h2 class="mb-3">R$219,90</h2>
+                    <p class="text-secondary">6x de R$36,65 sem juros</p>
+
+                    <!-- Tamanhos -->
+                    <div class="mb-3">
+                        <strong>Tamanho</strong><br />
+                        <button
+                            class="btn btn-outline-secondary size-btn">P</button>
+                        <button
+                            class="btn btn-outline-secondary size-btn">M</button>
+                        <button
+                            class="btn btn-outline-secondary size-btn">G</button>
+                        <button
+                            class="btn btn-outline-secondary size-btn">GG</button>
+                    </div>
+
+                    <!-- Cor -->
+                    <!-- <div class="mb-3">
+        <strong>Cor</strong><br />
+        <div class="color-box" style="background-color: #2f3d5c"></div>
+        <span>Stone Blue</span>
+      </div> -->
+
+                    <!-- Botão de Compra -->
+                    <button class="btn btn-secondary out-of-stock w-100 mt-3"
+                        disabled>
+                        ESGOTADO
+                    </button>
+
+                    <!-- Tabela de medidas -->
+                    <button class="btn btn-link mt-3 text-muted p-0"
+                        onclick="toggleTabela()">
+                        TABELA DE MEDIDAS
+                    </button>
+
+                    <div id="tabelaMedidas" class="tabela-container mt-3">
+                        <img src="/assets/img/shop/tabela-medidas.png"
+                            alt="Tabela de Medidas" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 🔹 RODAPÉ -->
+<footer class="footer-simple text-center bg-black text-white py-4">
+  <!-- Logo central -->
+  <div class="footer-logo mb-2">
+    <img src="/assets/img/logo_branco.png" alt="NOWAY Logo" style="height: 80px;">
+  </div>
+  <!-- Copyright -->
+  <p class="mb-1 small">© NOWAY™ 2025 – Todos os direitos reservados.</p>
+</footer>
+
+
+
+        <!-- Script toggle tabela -->
+        <script>
+  function toggleTabela() {
+    const tabela = document.getElementById("tabelaMedidas");
+    tabela.classList.toggle("active");
+  }
+</script>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
