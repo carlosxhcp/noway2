@@ -29,11 +29,13 @@
   width: 70vw;
   background-color: #000;
   color: white;
+  font-family: "Courier Prime", monospace;
+
 }
 
 .offcanvas-custom .nav-link {
   color: white;
-  font-size: 1.3rem;
+  font-size: 3rem;
   padding: 10px 0;
 }
 
