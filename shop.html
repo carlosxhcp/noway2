@@ -106,7 +106,6 @@
   <p class="mb-1 small">© NOWAY™ 2025 – Todos os direitos reservados.</p>
 </footer>
 
-
 <script>
 document.querySelectorAll('.swap-image').forEach(img => {
   const original = img.src;
@@ -120,17 +119,17 @@ document.querySelectorAll('.swap-image').forEach(img => {
     img.src = original;
   });
 
-  // Mobile touch com delay
-  img.addEventListener('touchstart', e => {
-    e.preventDefault(); // evita clique duplo do navegador
+  // Mobile touch com delay sem travar scroll
+  img.addEventListener('touchstart', () => {
     img.src = hoverSrc;
 
     setTimeout(() => {
       img.src = original;
-    }, 1000); // 1000ms = 1s
-  });
+    }, 1000); // 1 segundo
+  }, { passive: true }); // permite scroll normalmente
 });
 </script>
+
 
 
 </body>
