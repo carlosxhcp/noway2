@@ -1,5 +1,5 @@
 .swap-image {
-  transition: transform 1s ease;
+  transition: transform 0.4s ease;
 }
 
 .swap-image:hover {

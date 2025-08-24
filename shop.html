@@ -70,24 +70,18 @@
 
 <br><br>
 
-
-  <div class="container mt-5">
+<div class="container mt-5">
   <div class="row justify-content-center g-5">
-    <!-- Camiseta 1 -->
     <div class="col-12 col-sm-6 col-md-4">
       <a href="/produto1" class="text-decoration-none">
         <img src="/assets/img/shop/p1/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p2/mock.png" alt="Camisa 1">
       </a>
     </div>
-
-    <!-- Camiseta 2 -->
     <div class="col-12 col-sm-6 col-md-4">
       <a href="/produto2" class="text-decoration-none">
         <img src="/assets/img/shop/p2/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p3/mock.png" alt="Camisa 2">
       </a>
     </div>
-
-    <!-- Camiseta 3 -->
     <div class="col-12 col-sm-6 col-md-4">
       <a href="/produto3" class="text-decoration-none">
         <img src="/assets/img/shop/p3/mock.png" class="img-fluid swap-image" data-hover="assets/img/shop/p1/mock.png" alt="Camisa 3">
@@ -95,6 +89,7 @@
     </div>
   </div>
 </div>
+
 
 
   
@@ -114,21 +109,26 @@
 document.querySelectorAll('.swap-image').forEach(img => {
   const original = img.src;
   const hoverSrc = img.dataset.hover;
+  let mobileToggled = false;
 
-  // Desktop (hover)
+  // Desktop hover
   img.addEventListener('mouseenter', () => {
-    img.src = hoverSrc;
+    if (!mobileToggled) img.src = hoverSrc;
   });
   img.addEventListener('mouseleave', () => {
-    img.src = original;
+    if (!mobileToggled) img.src = original;
   });
 
-  // Mobile (touch)
-  img.addEventListener('touchstart', () => {
-    img.src = hoverSrc;
-  });
-  img.addEventListener('touchend', () => {
-    img.src = original;
+  // Mobile touch
+  img.addEventListener('touchstart', e => {
+    e.preventDefault(); // evita clique duplo do navegador
+    if (!mobileToggled) {
+      img.src = hoverSrc;
+      mobileToggled = true;
+    } else {
+      img.src = original;
+      mobileToggled = false;
+    }
   });
 });
 </script>
